@@ -21,7 +21,7 @@ const definitions = {
   }),
   street: new WeightedRandom({
     'Abbey (streetSuffix)': 6,
-    'King\s (streetSuffix)': 3,
+    'King\'s (streetSuffix)': 3,
     'Atterbury (streetSuffix)': 2,
     'Bridge (streetSuffix)': 3,
     'Broad (streetSuffix)': 3,
@@ -51,15 +51,15 @@ const definitions = {
     'turn right by (landmark)': 1
   }),
   end: new WeightedRandom({
-    ', then (segment)': 2,
-    '. After that, (segment)': 1,    
-    ', (segment)': 1,    
-    '.': 4,
-    ', and you\re there.': 2
+    '.': 7,
+    ', and you\'re there.': 4,
+    ', then (segment)(end)': 2,
+    '. After that, (segment)(end)': 1,    
+    ', (segment)(end)': 1
   })
 }
 
 const directions = new Format('To get to (landmark), (segment)(end)', definitions)
 for(var i  = 0; i < 5; i++){
-  console.log(directions.expand())
+  console.log(directions.expand(), '\n')
 }
