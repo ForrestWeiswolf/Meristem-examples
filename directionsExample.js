@@ -1,7 +1,8 @@
-//A basic example, using Formats to generate random directions
+Meristem = require('meristem')
+const WeightedRandom = Meristem.WeightedRandom
+const Format = Meristem.Format
 
-const WeightedRandom = require('Meristem').WeightedRandom
-const Format = require('Meristem').Format
+//A basic example, using Formats to generate random directions
 
 const definitions = {
   segment: new WeightedRandom({
