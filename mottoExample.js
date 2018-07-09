@@ -1,4 +1,4 @@
-Meristem = require('meristem')
+const Meristem = require('meristem')
 const WeightedRandom = Meristem.WeightedRandom
 const Format = Meristem.Format
 
