@@ -1,7 +1,8 @@
-//A basic example, using Formats to generate random motto-ish phrases
+Meristem = require('meristem')
+const WeightedRandom = Meristem.WeightedRandom
+const Format = Meristem.Format
 
-const WeightedRandom = require('Meristem').WeightedRandom
-const Format = require('Meristem').Format
+//A basic example, using Formats to generate random motto-ish phrases
 
 const definitions = {
   motto: new WeightedRandom({
@@ -9,7 +10,7 @@ const definitions = {
     '(abstraction) and (abstraction)': 3,
     '(abstraction) through (abstraction)': 2,
     'In (abstraction), we become (adjective)': 3,
-    'In (abstraction), we are (adjective)': 3  
+    'In (abstraction), we are (adjective)': 3
   }),
   abstraction: new WeightedRandom({
     'Love': 2,
@@ -36,6 +37,6 @@ const definitions = {
 }
 
 const motto = new Format('(motto)', definitions)
-for(var i  = 0; i < 5; i++){
+for (var i = 0; i < 5; i++) {
   console.log(motto.expand())
 }

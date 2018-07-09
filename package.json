@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "meristem": "^1.0.0"
+    "meristem": "^1.7.0"
   }
 }
